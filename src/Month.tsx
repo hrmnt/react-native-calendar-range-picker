@@ -74,10 +74,7 @@ function Month({
     <View style={[styles.monthContainer, style?.monthContainer]}>
       <View style={styles.monthNameContainer}>
         <Text style={[styles.monthName, style?.monthNameText]}>
-          {isMonthFirst ? <Text>{locale.monthNames[month - 1]} </Text> : null}
-          {year}
-          {locale.year}
-          {!isMonthFirst ? <Text> {locale.monthNames[month - 1]}</Text> : null}
+           <Text>{locale.monthNames[month - 1]} </Text> 
         </Text>
       </View>
       <View style={styles.dayNamesContainer}>{renderDayNames()}</View>
@@ -140,6 +137,7 @@ const styles = StyleSheet.create({
   monthNameContainer: {
     flexDirection: "row",
     alignItems: "center",
+    justifyContent:"center",
     height: 30,
     paddingLeft: 16,
   },
